@@ -377,6 +377,16 @@ class ChipsInputState<T> extends State<ChipsInput<T>>
   }
 
   @override
+  void didChangeInputControl(
+      TextInputControl? oldControl, TextInputControl? newControl) {}
+
+  @override
+  void insertContent(KeyboardInsertedContent content) {}
+
+  @override
+  void performSelector(String selectorName) {}
+
+  @override
   void didChangeDependencies() {
     super.didChangeDependencies();
     _effectiveFocusNode.canRequestFocus = _canRequestFocus;
